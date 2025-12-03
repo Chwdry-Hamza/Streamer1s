@@ -3,8 +3,9 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { getImagePrefix } from "@/utils/utils";
-
-
+import AreaChartSharpIcon from '@mui/icons-material/AreaChartSharp';
+import LightbulbSharpIcon from '@mui/icons-material/LightbulbSharp';
+import ExpandSharpIcon from '@mui/icons-material/ExpandSharp';
 const Work = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -21,20 +22,24 @@ const Work = () => {
     transition: { duration: 0.6, delay: 0.4 },
   };
 
-  const services = [
+ const services = [
   {
-      icon: "/images/icons/icon-consulting.svg",
-      text: "Boost Your Reach",
-    },
-    {
-      icon: "/images/icons/icon-blockchain.svg",
-      text: "Increase Your Earnings",
-    },
-    {
-      icon: "/images/icons/icon-Services.svg",
-      text: "Grow Your Fanbase",
-    },
-  ];
+    iconType: "mui",
+    icon: AreaChartSharpIcon,
+    text: "Boost Your Reach",
+  },
+  {
+    iconType: "mui",
+    icon: LightbulbSharpIcon,
+    text: "Increase Your Earnings",
+  },
+  {
+    iconType: "mui",
+    icon: ExpandSharpIcon,
+    text: "Grow Your Fanbase",
+  },
+];
+
 
   return (
     <section className="md:pt-28" id="work">
@@ -53,14 +58,19 @@ const Work = () => {
             <div className="grid md:grid-cols-2 gap-7 mt-11">
               {services.map((service, index) => (
                 <div key={index} className="flex items-center gap-5">
-                  <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
-                    <Image
-                      src= {`${getImagePrefix()}${service.icon}`}
-                      alt={`${service.text} icon`}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
+                <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
+  {service.iconType === "image" ? (
+    <Image
+      src={`${getImagePrefix()}${service.icon}`}
+      alt={`${service.text} icon`}
+      width={40}
+      height={40}
+    />
+  ) : (
+    <service.icon sx={{ fontSize: 40, color: "white" }} />
+  )}
+</div>
+
                   <p className="text-24 text-muted">{service.text}</p>
                 </div>
               ))}

@@ -1,3 +1,5 @@
+"use client";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,7 +36,7 @@ const CardSlider = () => {
         {companyLogos.map((logo, index) => (
           <div
             key={index}
-            className="flex justify-center items-center px-4 h-28" // 👈 fixed height + full center
+            className="flex justify-center items-center px-4 h-28"
           >
             <Image
               src={logo.src}

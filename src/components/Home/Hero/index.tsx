@@ -8,7 +8,8 @@ import CardSlider from "./slider";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { getImagePrefix } from "@/utils/utils";
-
+import ViewStreamIcon from '@mui/icons-material/ViewStream';
+import TvSharpIcon from '@mui/icons-material/TvSharp';
 const Hero = () => {
 
   const leftAnimation = {
@@ -34,12 +35,7 @@ const Hero = () => {
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
             <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
-              <Image
-                src= {`${getImagePrefix()}images/icons/icon-bag.svg`}
-                alt="icon"
-                width={40}
-                height={40}
-              />
+            <TvSharpIcon style={{ width: "40", height: "40" , color : "white"}} />
               <p className="text-white sm:text-28 text-18 mb-0">
                 Stream. Earn. <span className="text-primary">Go</span>
               </p>
