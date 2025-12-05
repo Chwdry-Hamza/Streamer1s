@@ -24,6 +24,20 @@ export default function ClipSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  // Play active video and pause others
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === activeIndex && isVisible) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      }
+    });
+  }, [activeIndex, isVisible]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,17 +141,18 @@ export default function ClipSection() {
               </div>
 
               {/* Video Column */}
-              <div className="col-span-1 lg:col-span-8 relative rounded-xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-48 sm:h-64 lg:h-auto order-1 lg:order-2">
+              <div className="col-span-1 lg:col-span-8 relative rounded-xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video lg:aspect-auto lg:min-h-[400px] order-1 lg:order-2">
                 {steps.map((step, index) => (
                   <video
                     key={index}
+                    ref={(el) => { videoRefs.current[index] = el; }}
                     src={step.video}
-                    autoPlay
                     loop
                     muted
                     playsInline
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1200 ease-out ${
-                      activeIndex === index ? "opacity-100" : "opacity-0"
+                    preload="auto"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-out ${
+                      activeIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
                     }`}
                   />
                 ))}
