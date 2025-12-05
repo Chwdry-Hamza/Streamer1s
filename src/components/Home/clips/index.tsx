@@ -82,12 +82,12 @@ export default function ClipSection() {
           isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="h-full flex items-center justify-center">
-          <div className="container mx-auto max-w-7xl px-6">
-            <div className="grid grid-cols-4 lg:grid-cols-12 gap-8">
+        <div className="h-full flex items-center justify-center py-4 sm:py-0">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8">
 
               {/* Text Column */}
-              <div className="col-span-4 lg:col-span-4 space-y-28">
+              <div className="col-span-1 lg:col-span-4 space-y-6 sm:space-y-12 lg:space-y-28 order-2 lg:order-1">
                 {steps.map((step, index) => (
                   <div
                     key={index}
@@ -100,7 +100,7 @@ export default function ClipSection() {
                     }`}
                   >
                     <div
-                      className={`w-5 h-5 rounded-full inline-block mb-6 transition-all duration-700 ${
+                      className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full inline-block mb-3 sm:mb-6 transition-all duration-700 ${
                         activeIndex === index
                           ? "bg-cyan-400 shadow-xl shadow-cyan-400/60 scale-125"
                           : "bg-gray-600"
@@ -109,14 +109,14 @@ export default function ClipSection() {
                     <h3
                       className={`font-black leading-tight transition-all duration-700 ${
                         activeIndex === index
-                          ? "text-5xl lg:text-6xl text-white"
-                          : "text-3xl lg:text-4xl text-gray-600"
+                          ? "text-2xl sm:text-4xl lg:text-6xl text-white"
+                          : "text-xl sm:text-2xl lg:text-4xl text-gray-600"
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className={`mt-4 text-base lg:text-lg leading-relaxed max-w-sm transition-colors duration-700 ${
+                      className={`mt-2 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed max-w-sm transition-colors duration-700 ${
                         activeIndex === index ? "text-gray-300" : "text-gray-600"
                       }`}
                     >
@@ -127,7 +127,7 @@ export default function ClipSection() {
               </div>
 
               {/* Video Column */}
-              <div className="col-span-4 lg:col-span-8 relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+              <div className="col-span-1 lg:col-span-8 relative rounded-xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-48 sm:h-64 lg:h-auto order-1 lg:order-2">
                 {steps.map((step, index) => (
                   <video
                     key={index}
@@ -147,9 +147,9 @@ export default function ClipSection() {
 
                 {/* Live indicator on first step */}
                 {activeIndex === 0 && (
-                  <div className="absolute top-8 left-8 flex items-center gap-3">
-                    <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse" />
-                    <span className="text-white font-bold text-lg tracking-wider">
+                  <div className="absolute top-4 left-4 sm:top-8 sm:left-8 flex items-center gap-2 sm:gap-3">
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full animate-pulse" />
+                    <span className="text-white font-bold text-sm sm:text-lg tracking-wider">
                       LIVE RECORDING
                     </span>
                   </div>
@@ -163,8 +163,8 @@ export default function ClipSection() {
 
       {/* Background blur orbs */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-700/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-600/30 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-purple-700/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-600/30 rounded-full blur-3xl" />
       </div>
     </section>
   );

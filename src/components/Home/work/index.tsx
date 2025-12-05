@@ -42,48 +42,49 @@ const Work = () => {
 
 
   return (
-    <section className="md:pt-28" id="work">
+    <section className="pt-12 sm:pt-20 md:pt-28" id="work">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
-        <div ref={ref} className="grid grid-cols-12 items-center">
+        <div ref={ref} className="grid grid-cols-12 items-center gap-6 lg:gap-0">
           <motion.div
             {...bottomAnimation}
-            className="lg:col-span-7 col-span-12"
+            className="lg:col-span-7 col-span-12 text-center lg:text-left order-2 lg:order-1"
           >
-            <p className="sm:text-28 text-18 text-white">
+            <p className="text-base sm:text-18 lg:text-28 text-white">
               Work with <span className="text-primary">us</span>
             </p>
-            <h2 className="sm:text-40 text-30 text-white lg:w-full md:w-70% font-medium">
+            <h2 className="text-xl sm:text-2xl lg:text-40 text-white lg:w-full md:w-70% font-medium">
               Partner with us and take your streaming journey to the next level — more reach, more engagement, more rewards.
             </h2>
-            <div className="grid md:grid-cols-2 gap-7 mt-11">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7 mt-6 sm:mt-11">
               {services.map((service, index) => (
-                <div key={index} className="flex items-center gap-5">
-                <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
+                <div key={index} className="flex items-center gap-3 sm:gap-5 justify-center lg:justify-start">
+                <div className="px-3 py-3 sm:px-5 sm:py-5 bg-light_grey bg-opacity-30 rounded-full">
   {service.iconType === "image" ? (
     <Image
       src={`${getImagePrefix()}${service.icon}`}
       alt={`${service.text} icon`}
       width={40}
       height={40}
+      className="w-8 h-8 sm:w-10 sm:h-10"
     />
   ) : (
-    <service.icon sx={{ fontSize: 40, color: "white" }} />
+    <service.icon sx={{ fontSize: 32, color: "white" }} className="sm:text-[40px]" />
   )}
 </div>
 
-                  <p className="text-24 text-muted">{service.text}</p>
+                  <p className="text-base sm:text-lg lg:text-24 text-muted">{service.text}</p>
                 </div>
               ))}
             </div>
           </motion.div>
-          <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
-            <div className="2xl:-mr-40 mt-9 flex justify-center">
+          <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12 order-1 lg:order-2">
+            <div className="2xl:-mr-40 mt-4 sm:mt-9 flex justify-center">
               <Image
                src= "/images/Streamers2.png"
                 alt="image"
                 width={600}
                 height={425}
-                className="lg:w-full"
+                className="w-4/5 sm:w-full lg:w-full"
               />
             </div>
           </motion.div>

@@ -37,13 +37,13 @@ const Perks = () => {
 
 
   return (
-    <section className="pb-28 pt-28 relative">
+    <section className="pb-12 sm:pb-28 pt-12 sm:pt-28 relative">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="text-center">
-          <p className="text-muted sm:text-28 text-18 mb-4 pb-6 relative after:content-[''] after:w-8 after:h-0.5 after:bg-primary after:absolute after:bottom-0 after:left-1/2">
+          <p className="text-muted text-sm sm:text-18 lg:text-28 mb-4 pb-6 relative after:content-[''] after:w-8 after:h-0.5 after:bg-primary after:absolute after:bottom-0 after:left-1/2">
             Here's how it  <span className="text-primary">works</span>
           </p>
-          <h2 className="text-white sm:text-40 text-30 font-medium">
+          <h2 className="text-white text-xl sm:text-30 lg:text-40 font-medium">
            Three easy steps for the <span className="text-primary">player</span>
           </h2>
           {/* <div className="mt-16 border border-border grid lg:grid-cols-3 sm:grid-cols-2 border-opacity-20 py-16 gap-10 px-20 rounded-3xl sm:bg-perk bg-dark_grey bg-opacity-35 lg:bg-bottom bg-center bg-no-repeat">
@@ -72,29 +72,29 @@ const Perks = () => {
           </div> */}
            <section className="md:pt-18" id="work">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
-        <div ref={ref} className="grid grid-cols-12 items-center">
+        <div ref={ref} className="grid grid-cols-12 items-center gap-6 lg:gap-0">
           <motion.div
             {...bottomAnimation}
-            className="lg:col-span-7 col-span-12 lg:text-left"
+            className="lg:col-span-7 col-span-12 lg:text-left text-center order-2 lg:order-1"
           >
-            <p className="sm:text-40 text-30 text-white">
+            <p className="text-xl sm:text-30 lg:text-40 text-white">
               Step <span className="text-primary">1</span> :
             </p>
-            <h2 className="sm:text-40 text-30 text-white lg:w-full md:w-70% font-medium">
+            <h2 className="text-xl sm:text-30 lg:text-40 text-primary lg:w-full md:w-70% font-medium">
               Find Livespins at your favourite casino
             </h2>
-              <p className="sm:text-28 text-18 text-white">
+              <p className="text-sm sm:text-18 lg:text-28 text-white">
               Livespins integrates into the casino lobby exactly like any other game provider via  <span className="text-primary">API</span>.
             </p>
           </motion.div>
-          <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
-            <div className="2xl:-mr-40 mt-9 flex justify-center">
+          <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12 order-1 lg:order-2">
+            <div className="2xl:-mr-40 mt-4 sm:mt-9 flex justify-center">
               <Image
                src= "/images/Step1.png"
                 alt="image"
                 width={600}
                 height={425}
-                className="lg:w-full"
+                className="w-4/5 sm:w-full lg:w-full"
               />
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ const Perks = () => {
         {/* <div className="bg-gradient-to-br from-tealGreen to-charcoalGray sm:w-50 w-96 sm:h-50 h-96 rounded-full sm:-bottom-80 bottom-0 blur-400 z-0 absolute sm:-left-48 opacity-60"></div> */}
 
     </section>
-            
+
         </div>
       </div>
     </section>

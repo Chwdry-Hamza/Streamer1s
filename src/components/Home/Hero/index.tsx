@@ -28,25 +28,25 @@ const Hero = () => {
 
   return (
     <section
-      className="relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1"
+      className="relative pt-24 pb-12 sm:pt-32 md:pt-40 md:pb-28 overflow-hidden z-1"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
-            <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
-            <TvSharpIcon style={{ width: "40", height: "40" , color : "white"}} />
-              <p className="text-white sm:text-28 text-18 mb-0">
+            <div className="flex gap-4 sm:gap-6 items-center lg:justify-start justify-center mb-4 sm:mb-5 mt-8 sm:mt-16 lg:mt-24">
+            <TvSharpIcon style={{ width: "32", height: "32" , color : "white"}} className="sm:w-10 sm:h-10" />
+              <p className="text-white text-base sm:text-18 lg:text-28 mb-0">
                 Stream. Earn. <span className="text-primary">Go</span>
               </p>
             </div>
-            <h1 className="font-medium lg:text-76 md:text-70 text-54 lg:text-start text-center text-white mb-10">
+            <h1 className="font-medium text-3xl sm:text-4xl md:text-54 lg:text-70 xl:text-76 lg:text-start text-center text-white mb-6 sm:mb-10">
               Bet with <span className="text-primary">Streamers ⚡</span> of your{" "}
               <span className="text-primary">choice</span>!
             </h1>
             <div className="flex items-center md:justify-start justify-center gap-8">
               <button
-                className="bg-transparent border border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-7"
+                className="bg-transparent border border-primary rounded-lg text-base sm:text-lg lg:text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-5 sm:px-7"
               >
                 <Link
               href="/contact"            >
@@ -69,7 +69,7 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        <p className="text-white sm:text-28 text-18 mb-0 text-center">
+        <p className="text-white text-base sm:text-18 lg:text-28 mb-0 text-center mt-8 sm:mt-0">
   Trusted by
 </p>
 
