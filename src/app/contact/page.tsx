@@ -30,10 +30,10 @@ export default function ContactPage() {
   <p>
     Or email us directly at:{" "}
     <a
-      href="mailto:AliHamza.DevFlow@gmail.com"
+      href="mailto:shairaterraza@payland.info "
       className="text-primary underline"
     >
-      AliHamza.DevFlow@gmail.com
+      ShairaTerraza@payland.info 
     </a>
   </p>
 </div>
