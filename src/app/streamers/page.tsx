@@ -130,7 +130,7 @@ export default function Streamers() {
               </p>
             </div>
 
-            <div className="relative w-full aspect-video max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
+            {/* <div className="relative w-full aspect-video max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
               <video
                 className="w-full h-full object-cover"
                 controls
@@ -141,7 +141,7 @@ export default function Streamers() {
                 <source src="/images/Streamervideo1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
+            </div> */}
 
             <div className="text-center mt-12">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
