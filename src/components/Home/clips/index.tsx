@@ -6,17 +6,17 @@ const steps = [
   {
     title: "We record",
     description: "We capture all the biggest moments relevant to your brand.",
-    video: "/images/video1.mp4",
+    video: "/images/video11.mp4",
   },
   {
     title: "We edit",
     description: "We create and edit highlight videos. Ready to share in real-time.",
-    video: "/images/video2.mp4",
+    video: "/images/video22.mp4",
   },
   {
     title: "You share",
     description: "Simply grab your favourite clip and share it across marketing channels.",
-    video: "/images/video3.mp4",
+    video: "/images/video33.mp4",
   },
 ];
 
@@ -151,7 +151,7 @@ export default function ClipSection() {
                     muted
                     playsInline
                     preload="auto"
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-out ${
+                    className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-out ${
                       activeIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
                     }`}
                   />
