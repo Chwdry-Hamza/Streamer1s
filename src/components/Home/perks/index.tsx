@@ -81,10 +81,10 @@ const Perks = () => {
               Step <span className="text-primary">1</span> :
             </p>
             <h2 className="text-xl sm:text-30 lg:text-40 text-primary lg:w-full md:w-70% font-medium">
-              Find Livespins at your favourite casino
+              Discover Your Favorite Streamer Explore the streamer lobby. 
             </h2>
               <p className="text-sm sm:text-18 lg:text-28 text-white">
-              Livespins integrates into the casino lobby exactly like any other game provider via  <span className="text-primary">API</span>.
+              See who is currently live, pick the one that matches your mood,   <span className="text-primary">and join immediately.</span>.
             </p>
           </motion.div>
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12 order-1 lg:order-2">

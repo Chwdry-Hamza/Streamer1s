@@ -7,11 +7,11 @@ const perksData = [
   },
   {
     title: "Operators",
-    text: "Whether looking to boost player acquisition or player engagement, Livespins can help. Onboard your own brand ambassadors or let Livespins give you a plug and play streaming strategy using our influencers.",
+    text: "Need better player acquisition and engagement? 1XStreamers helps via your own ambassadors or our instant influencer streaming strategies.",
   },
   {
     title: "Streamers",
-    text: "Join the crew and become a Livespins streamer or collaborate with us to boost your own channel.",
+    text: "Join the crew and become a  1XStreamer or collaborate with us to boost your own channel.",
   },
 ];
 

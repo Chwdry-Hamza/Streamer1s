@@ -5,7 +5,7 @@ import Link from "next/link";
 import CardSlider from "./../../components/Home/Hero/slider";
 
 export const metadata: Metadata = {
-  title: "1XSgtreamers",
+  title: "1XStreamers",
   description: "Get in touch with 1XStreamers team",
 };
 

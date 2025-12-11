@@ -32,10 +32,11 @@ const Perks2 = () => {
               Step <span className="text-primary">2</span> :
             </p>
             <h2 className="text-xl sm:text-30 lg:text-40 text-primary lg:w-full md:w-70% font-medium">
-              Bet behind the streamer
+              Join the live stream
             </h2>
               <p className="text-sm sm:text-18 lg:text-28 text-white">
-              Place a bet to team up and "bet behind" the streamer for a chance to win together.<br className="hidden sm:block"/><span className="text-primary">If the streamer wins</span>,<br className="hidden sm:block"/> the players win.
+           Enjoy a real-time gaming experience with the streamer.  
+<span className="text-primary">As you watch them play</span>,<br className="hidden sm:block"/> join the excitement of the same game with your own bets.
             </p>
           </motion.div>
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12 order-1 lg:order-2">

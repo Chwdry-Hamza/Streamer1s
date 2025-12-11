@@ -17,7 +17,7 @@ const Contactus = () => {
           </h2>
 
 <p className="text-white text-sm sm:text-lg lg:text-2xl font-black leading-tight mt-4 sm:mt-6 px-2 sm:px-0">
-            If you want to learn more about becoming a Livespins streamer, we would love to hear from you.
+            If you want to learn more about becoming a 1XStreamer, we would love to hear from you.
           </p>
 
           {/* Button */}
