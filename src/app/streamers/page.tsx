@@ -72,7 +72,7 @@ export default function Streamers() {
 
     
       </div>
-      <div className="w-full mt-12 px-6">
+      {/* <div className="w-full mt-12 px-6">
   <p className="text-white sm:text-28 text-18 mb-4 text-center">
     Trusted by
   </p>
@@ -80,7 +80,7 @@ export default function Streamers() {
   <div className="max-w-6xl mx-auto">
     <CardSlider />
   </div>
-</div>
+</div> */}
       {/* FULL WIDTH 3-CARD SECTION */}
 <div className="w-full mt-36 px-6">
   <div className="max-w-6xl mx-auto">

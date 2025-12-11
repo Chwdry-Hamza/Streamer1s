@@ -69,11 +69,11 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        <p className="text-white text-base sm:text-18 lg:text-28 mb-0 text-center mt-8 sm:mt-0">
+        {/* <p className="text-white text-base sm:text-18 lg:text-28 mb-0 text-center mt-8 sm:mt-0">
   Trusted by
 </p>
 
-        <CardSlider />
+        <CardSlider /> */}
       </div>
       <div className="absolute w-50 h-50 bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1"></div>
     </section>
