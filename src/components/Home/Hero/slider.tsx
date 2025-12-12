@@ -1,42 +1,23 @@
 "use client";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 const CardSlider = () => {
   const companyLogos = [
-    { src: "/images/relax1.png", width: 200, height: 80 },
-    { src: "/images/everymatrix2.png", width: 200, height: 80 },
-    { src: "/images/evolution3.png", width: 200, height: 80 },
-    { src: "/images/yggdrasil4.png", width: 200, height: 80 },
-    { src: "/images/softswiss5.png", width: 200, height: 80 },
+    { src: "/images/Gamdom.png", width: 180, height: 80, url: "https://gamdom.com/" },
+    { src: "/images/Stake.png", width: 180, height: 80, url: "https://stake.com/" },
   ];
-
-  const settings = {
-    autoplay: true,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplaySpeed: 1500,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    cssEase: "ease-in-out",
-    responsive: [
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-    ],
-  };
 
   return (
     <div className="mt-10">
-      <Slider {...settings}>
+      <div className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20">
         {companyLogos.map((logo, index) => (
-          <div
+          <a
             key={index}
-            className="flex justify-center items-center px-4 h-28"
+            href={logo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center h-28 border border-gray-700 rounded-lg px-8 py-4 hover:border-gray-500 transition-colors cursor-pointer"
           >
             <Image
               src={logo.src}
@@ -45,9 +26,9 @@ const CardSlider = () => {
               height={logo.height}
               className="object-contain"
             />
-          </div>
+          </a>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };
